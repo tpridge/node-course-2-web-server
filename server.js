@@ -50,6 +50,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        currentYear: new Date().getFullYear()
+    });
+});
+
 // /bad - send back json w/ err property
 app.get('/bad', (req, res) => {
     res.send({
